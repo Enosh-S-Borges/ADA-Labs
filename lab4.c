@@ -1,5 +1,5 @@
 /*Implement  Brute  force  string  matching  algorithm  to  search  for  a 
-pattern of length „M‟ in a text of length „N‟ (M<=N) and perform its 
+pattern of length "M" in a text of length "N" (M<=N) and perform its 
 analysis for worst case, best-case and average inputs.*/
 
 #include <stdio.h>
