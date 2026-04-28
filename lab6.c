@@ -1,4 +1,4 @@
-/*Implement  Quick  Sort  algorithm  and  perform  its  analysis  for  worst case, best-case and average inputs.*/
+//Implement  Quick  Sort  algorithm  and  perform  its  analysis  for  worst case, best-case and average inputs.
 
 #include <stdio.h>
 #include <stdlib.h>
