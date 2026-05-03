@@ -61,7 +61,7 @@ void tester()
         printf("%d ", arr[i]);
     printf("\n");
     quicksort(arr, 0, n - 1);
-    printf("THE ELEMENTS OF THE ARRAY BEFORE SORTING\n");
+    printf("THE ELEMENTS OF THE ARRAY AFTER SORTING\n");
     for (int i = 0; i < n; i++)
         printf("%d ", arr[i]);
     printf("\n");
