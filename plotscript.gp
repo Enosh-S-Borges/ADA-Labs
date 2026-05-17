@@ -1,8 +1,8 @@
-set title "Merge Sort Algorithm Analysis -BORGES"
+set title "Comparison of DFS and BFS Algorithm -BORGES"
 set xlabel "Input size (n)"
 set ylabel "Number of Basic operations"
 set grid
 
-plot "Mergebest.txt" with linespoints title "Best case",\
-     "Mergeavg.txt" with linespoints title "Average case",\
-     "Mergeworst.txt" with linespoints title "Worst case"
+plot "bfsadjMat.txt" with linespoints title "BFS algorithm",\
+     "dfsadjMat.txt" with linespoints title "DFS algorithm",\
+#     "Quickworst.txt" with linespoints title "Worst case"

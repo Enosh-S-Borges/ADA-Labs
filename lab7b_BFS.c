@@ -81,7 +81,7 @@ void tester()
     }
     else
     {
-        printf("\nCycle doesnot exists\n");
+        printf("\nCycle does not exists\n");
     }
 }
 

@@ -63,7 +63,7 @@ void tester()
     if (isCycle)
         printf("Cycle exists\n");
     else
-        printf("Cycle doesnot exists\n");
+        printf("Cycle does not exists\n");
 }
 
 void plotter()
