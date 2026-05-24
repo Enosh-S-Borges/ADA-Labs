@@ -1,0 +1,15 @@
+Enter
+1.Tester
+2.Plotter
+1
+Enter number of vertices :
+6
+Enter the adjacency matrix :
+0 1 1 0 0 0 
+0 0 0 1 0 0
+0 0 0 1 1 0
+0 0 0 0 0 1
+0 0 0 0 0 1
+0 0 0 0 0 0
+Topological sorting order : 
+0 1 2 3 4 5 
