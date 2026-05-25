@@ -92,7 +92,7 @@ void tester()
 
 void plotter()
 {
-    FILE *f1 = fopen("bfsMatTopSort.txt", "w");
+    FILE *f1 = fopen("dfsMatTopSort.txt", "w");
 
     for (int k = 1; k <= 10; k++)
     {
