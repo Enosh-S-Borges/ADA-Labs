@@ -179,15 +179,62 @@ void tester()
 void plotter()
 {
     FILE *f = fopen("prims.txt", "w");
-    for (int i = 0; i < 5; i++)
+
+    srand(1);
+
+    for (int nodes = 5; nodes <= 25; nodes += 5)
     {
+        n = nodes;
+
+        int adjMat[n][n];
+
+        // Generate connected undirected graph
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                if (i == j)
+                    adjMat[i][j] = 0;
+                else
+                    adjMat[i][j] = INT_MAX;
+            }
+        }
+
+        // Create a chain first to guarantee connectivity
+        for (int i = 0; i < n - 1; i++)
+        {
+            int wt = rand() % 20 + 1;
+            adjMat[i][i + 1] = wt;
+            adjMat[i + 1][i] = wt;
+        }
+
+        // Add extra random edges
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = i + 2; j < n; j++)
+            {
+                if (rand() % 2)
+                {
+                    int wt = rand() % 20 + 1;
+                    adjMat[i][j] = wt;
+                    adjMat[j][i] = wt;
+                }
+            }
+        }
+
         heapCount = 0;
         graphCount = 0;
-        tester();
-        fprintf(f, "%d\t%d\n", n, graphCount > heapCount ? graphCount : heapCount);
+
+        prims(n, adjMat);
+
+        fprintf(f, "%d\t%d\n",
+                n,
+                (graphCount > heapCount) ? graphCount : heapCount);
     }
 
     fclose(f);
+
+    printf("Data written to prims.txt\n");
 }
 
 void main()
