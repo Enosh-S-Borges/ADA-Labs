@@ -177,16 +177,33 @@ void tester()
     }
     printf("\nHeapCount : %d\t GraphCount : %d\n", heapCount, graphCount);
 }
-
 void plotter()
 {
     FILE *f = fopen("dikstras.txt", "w");
-    for (int i = 0; i < 5; i++)
+
+    for (n = 5; n <= 25; n += 5)
     {
+        int adjMat[n][n], dist[n];
+
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                if (i == j)
+                    adjMat[i][j] = 0;
+                else
+                    adjMat[i][j] = rand() % 20 + 1;
+            }
+        }
+
         heapCount = 0;
         graphCount = 0;
-        tester();
-        fprintf(f, "%d\t%d\n", n, graphCount > heapCount ? graphCount : heapCount);
+
+        dikstras(n, adjMat, 0, dist);
+
+        fprintf(f, "%d\t%d\n",
+                n,
+                (graphCount > heapCount) ? graphCount : heapCount);
     }
 
     fclose(f);
