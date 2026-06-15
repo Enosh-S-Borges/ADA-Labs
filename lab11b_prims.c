@@ -226,6 +226,6 @@ void main()
         plotter();
         break;
     default:
-        printf("Invalid Input!");
+        printf("Invalid Input!\n");
     }
 }
